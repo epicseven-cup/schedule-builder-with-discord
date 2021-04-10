@@ -1,0 +1,10 @@
+.contentImage{
+    background-image: url("../DirectionFile/Catgirl.webp");
+    background-color: #BBC5AA;
+    background-repeat: no-repeat;
+    /*background-attachment: fixed;*/
+    background-position: center;
+    background-size: contain;
+    height: 100vh;
+    width: 100vw;
+}
