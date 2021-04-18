@@ -6,50 +6,53 @@ function scalingCanvas(){
 
   let canvas = document.getElementById("plateform");
 
-  // let canvasWidth = canvas.clientWidth;
-  // let canvasHeight = canvas.clientHeight;
-  if (Math.abs(windowWidth-windowHeight)< 80){
+  if (Math.abs(windowWidth-windowHeight)< 200){
     const adjustcanvasWidth = (parseFloat(windowWidth)) * 0.660;
     canvas.style.width = adjustcanvasWidth+"px";
     canvas.style.height = 500+"px";
 
-
-    // const percentDown = adjustcanvasWidth/windowHeight * 100 //1762
-    // console.log(percentDown)
-    // canvas.style.marginTop = percentDown + "%";
+    autoPushingH()
 
   }else if(windowWidth < windowHeight){
     const adjustcanvasWidth = (parseFloat(windowWidth)) * 0.6486;
     canvas.style.width = adjustcanvasWidth+"px";
     canvas.style.height = 500+"px";
 
-    // const percentDown = (windowHeight/500 * 2)*6.5   //1762
-    // console.log(percentDown)
-    // canvas.style.marginTop = percentDown + "%";
-
+    autoPushingH()
 
   }else if (windowHeight < windowWidth){
     const adjustcanvasWidth = (parseFloat(windowHeight)) * 0.80916030534;
     canvas.style.width = adjustcanvasWidth+"px";
     canvas.style.height = 500+"px";
 
-
-    // const percentDown = adjustcanvasWidth/windowHeight  //1762
-    // console.log(percentDown)
-    // canvas.style.marginTop = percentDown + "%";
+    autoPushingW()
 
   }
-  // console.log(canvas.style.width)
   console.log("Canvas Width:"+ canvas.style.width);
-
-// TODO: Need help to convert the div element into correct size when the height and width is similar
-
-//get the actual length of the background image each time it resize than mins the percent of the length
-
 }
 
+function autoPushingH(){
+  const windowWidth = window.innerWidth;
+  const windowHeight = window.innerHeight;
+  // const divHeight = document.getElementsByClassName("outsidePlateform contentImage");
+  const midpoint = Math.abs(windowHeight/2 -500)
+  let canvas = document.getElementById("plateform");
+  canvas.style.transform = "translateY(" + midpoint + "px" + ")"
 
+  console.log(midpoint)
+}
 
+function autoPushingW(){
+  const windowWidth = window.innerWidth;
+  const windowHeight = window.innerHeight;
+  // const divHeight = document.getElementsByClassName("outsidePlateform contentImage");
+  const midpoint = Math.min(Math.abs(windowHeight*0.9-100),0);
+  let canvas = document.getElementById("plateform");
+  canvas.style.transform = "translateY(" + midpoint + "px" + ")"
+
+  console.log(midpoint)
+
+}
 
 
 
