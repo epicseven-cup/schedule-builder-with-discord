@@ -7,7 +7,7 @@
 
 
 .contentImage{
-    background-image: url("../DirectionFile/Catgirl.webp");
+    background-image: url("/DirectionFile/Catgirl.webp");
     background-color: #BBC5AA;
     background-repeat: no-repeat;
     background-attachment: scroll;
