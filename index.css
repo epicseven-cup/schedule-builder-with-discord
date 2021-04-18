@@ -1,0 +1,54 @@
+*{
+  /* border-style: solid; */
+}
+
+
+
+
+
+.contentImage{
+    background-image: url("../DirectionFile/Catgirl.webp");
+    background-color: #BBC5AA;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position:center center;
+    /* background-size: cover; */
+    position: fixed;
+    background-size: contain;
+    height: 100vh;
+    width: 100vw;
+}
+
+.banner{
+    /* border-style: solid; */
+    /*background-image: url("../DirectionFile/myphoto.jpg");*/
+    /*background-position: center;*/
+    /*background-size: cover;*/
+}
+
+.banner div{
+      text-align: center;
+      background-color: #DDE2C6;
+      /* border-right: solid; */
+}
+
+
+.outsidePlateform{
+    border-style: solid;
+    border-color: red;
+    /* height: 100vh; */
+  display: flex;
+  justify-content: center;
+}
+
+
+/*TODO: Need to do math for the size of canvas after the website loaded */
+
+
+
+.outsidePlateform canvas{
+  border-style: solid;
+  position: relative;
+  /*height: 100vh;*/
+  /* width: 100vw; */
+}
